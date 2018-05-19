@@ -1,0 +1,21 @@
+body .reveal section img, .noImageStyling {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.reveal .img-bar__wrap {
+  display: inline-block;
+  width: 300px;
+
+}
+.reveal .img-bar__wrap h2 {
+  font-size: 2.0em;
+}
+.reveal .img-bar__wrap ul {
+  margin-bottom: 34px;
+}
+
+.reveal .text-wrap__about{
+  display: inline-block;
+  width: 650px;
+}

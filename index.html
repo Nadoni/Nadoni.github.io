@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+
+    <!--<link rel="stylesheet" href="css/theme/electron.css">-->
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-transition="convex">
+            <img class="noImageStyling" src="img/electron-logo.svg"/>
+        </section>
+        <section data-transition="convex" data-state="firstvideo">
+            <h2>What is Electron?</h2>
+            <ul>
+                <li>Open Source Framework</li>
+                <li>Cross Platform Desktop Apps</li>
+                <li>HTML, CSS, JS</li>
+            </ul>
+            <img src="./img/launch.gif"/>
+        </section>
+        <section data-transition="convex">
+            <h2>Problems without Electron</h2>
+            <ul>
+                <li>Different languages for websites and desktop apps</li>
+                <li>Hard to acces native platform features</li>
+            </ul>
+
+        </section>
+        <section data-transition="convex">
+            <aside class="text-wrap__about">
+                <h2 style="font-size: 2.0em;">How Electron solves them</h2>
+                <ul style="margin-bottom: 32px;">
+                    <li>Web Technologies(only the good)</li>
+                    <li>Platform-specific features</li>
+                </ul>
+                <h3 style="color: #5d98a2">More pros:</h3>
+                <ul>
+                    <li>use of frameworks (angular.js, Bootstrap, Typescript,...</li>
+                    <li>easly port websites to desktop applications</li>
+                </ul>
+            </aside>
+
+            <aside class="img-bar__wrap">
+                <img src="img/menu-bar-mac.jpg" alt="" width="300">
+                <img src="img/menu-bar-win.jpg" alt="" width="300">
+            </aside>
+
+        </section>
+        <section data-transition="convex">
+            <h2>What competitors are there?</h2>
+            <img src="img/JavaFX_Logo.png" alt="" width="300" style="margin-bottom: 100px;">
+            <img src="img/nwjs.png" alt="" width="300">
+        </section>
+
+        <section data-transition="convex">
+            <h2>How it works?</h2>
+            <img src="img/components.png"/>
+        </section>
+        <section data-transition="convex">
+            <h2>Processes</h2>
+            <img src="img/proc.png" height="450px"/>
+        </section>
+        <section data-transition="convex">
+            <img src="img/main.png"/>
+        </section>
+
+        <section data-transition="convex">
+            <img src="img/renderer.png"/>
+        </section>
+        <section data-transition="convex">
+            <h2>Think of it like this</h2>
+            <img src="img/like-this.png" alt="" width="700">
+        </section>
+        <section data-transition="convex">
+            <h2>Note on security</h2>
+            <ul>
+                <li>By default, you get full access to node.js in renderer processess</li>
+                <li>You can still achieve a degree of sandbox through</li>
+                <ul>
+                    <li>disabling the node integration, enable contextIsolation in the whole rendere process</li>
+                    <li>enclosing the content in webview</li>
+                </ul>
+            </ul>
+        </section>
+        <section data-transition="convex">
+            <blockquote style="padding: 30px">...be aware that displaying arbitrary content from untrusted sources poses
+                a severe security risk that Electron is not intended to handle.
+            </blockquote>
+            <i style="float: right; margin-right: 80px;">Electron docs</i>
+        </section>
+        <section data-transition="convex">
+            <h2>Access to native API</h2>
+            <img src="img/ipc.png"/>
+        </section>
+        <section data-transition="convex">
+            <h2>Put it all together</h2>
+            <img src="img/app-files.png" width="700"/>
+        </section>
+        <section data-transition="convex">
+            <h2>Get Started</h2>
+            <ul>
+                <li>Install Node.js</li>
+                <li>npm init</li>
+                <li>npm install electron -g</li>
+                <li>npm install --save-dev electron</li>
+            </ul>
+        </section>
+        <section data-transition="convex">
+            <h2>Folder structure</h2>
+            <img src="img/folder_structure.jpg" alt="">
+            
+        </section>
+        <section data-transition="convex">
+            <p>package.json</p>
+            <pre style="width: 400px"><code data-trim data-noescape>
+                  {
+                    "name": "your-app",
+                    "version": "0.1.0",
+                    "main": "main.js",
+                    "scripts": {
+                      "start": "electron ."
+                    }
+                  }
+            </code></pre>
+        </section>
+        <section data-transition="convex">
+            <p>main.js</p>
+            <img src="img/mainjs.jpg" alt="" style="max-height: 500px">
+        </section>
+        <section data-transition="convex">
+            <p>index.html</p>
+            <img src="img/index.jpg" alt="" >
+        </section>
+        <section data-transition="convex">
+            <p><span style="color: #5d98a2">npm start</span></p>
+            <img src="img/simple_app.jpg" alt="" style="max-height: 500px">
+        </section>
+        <section data-transition="convex">
+            <h4>Why would I want to build a desktop application in the first place?</h4>
+            <img src="./img/giphy.gif"/>
+        </section>
+        <section data-transition="convex">
+            <h4>But why else would you want to write an application that works on the desktop today?</h4>
+            <img src="./img/Itsworking.gif"/>
+        </section>
+        <section data-transition="convex">
+            <h4>Why would I want to build a desktop application in Electron?</h4>
+            <img src="./img/why.gif"/>
+        </section>
+        <section data-transition="convex">
+            <img src="./img/justdoit.gif"/>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        controls: true,
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+    Reveal.addEventListener('firstvideo', function () {
+        document.getElementById('firstvideo').play()
+    }, false)
+</script>
+</body>
+</html>
